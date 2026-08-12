@@ -1,0 +1,33 @@
+#!/bin/sh
+# Maven Wrapper script for Unix-like systems
+# https://maven.apache.org/wrapper/
+
+set -e
+
+MAVEN_PROJECTBASEDIR="${MAVEN_BASEDIR:-$(cd "$(dirname "$0")" && pwd)}"
+MAVEN_WRAPPER_PROPERTIES="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.properties"
+
+if [ -f "$MAVEN_WRAPPER_PROPERTIES" ]; then
+  distributionUrl=$(grep 'distributionUrl' "$MAVEN_WRAPPER_PROPERTIES" | cut -d'=' -f2-)
+fi
+
+MAVEN_HOME="$HOME/.m2/wrapper/dists/$(basename "$distributionUrl" .zip)"
+
+if [ ! -d "$MAVEN_HOME" ]; then
+  echo "Downloading Maven from $distributionUrl..."
+  mkdir -p "$MAVEN_HOME"
+  tmpFile="$(mktemp)"
+  if command -v curl > /dev/null 2>&1; then
+    curl -fsSL "$distributionUrl" -o "$tmpFile"
+  elif command -v wget > /dev/null 2>&1; then
+    wget -q "$distributionUrl" -O "$tmpFile"
+  else
+    echo "Error: Neither curl nor wget found."
+    exit 1
+  fi
+  unzip -q -o "$tmpFile" -d "$MAVEN_HOME"
+  rm "$tmpFile"
+fi
+
+MVN_CMD=$(find "$MAVEN_HOME" -name mvn -type f | head -n 1)
+exec "$MVN_CMD" "$@"

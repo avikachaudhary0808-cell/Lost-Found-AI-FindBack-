@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="fb-mark" x1="4" y1="4" x2="36" y2="36">
+      <stop offset="0%" stopColor="#06b6d4" />
+      <stop offset="100%" stopColor="#84cc16" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M20 4c-6.2 0-11 4.7-11 10.6C9 22.4 20 36 20 36s11-13.6 11-21.4C31 8.7 26.2 4 20 4Z"
+    stroke="url(#fb-mark)"
+    strokeWidth="1.8"
+    opacity="0.75"
+  />
+  <circle cx="18" cy="14" r="5.4" stroke="url(#fb-mark)" strokeWidth="2" />
+  <path
+    d="m22.2 18.2 4.4 4.4"
+    stroke="url(#fb-mark)"
+    strokeWidth="2"
+    strokeLinecap="round"
+  />
+  <circle cx="18" cy="14" r="1.8" fill="#84cc16" />
+</svg>
