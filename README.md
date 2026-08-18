@@ -52,8 +52,7 @@ The platform combines **rule-based intelligent matching, image similarity, JWT a
 * 🗄️ **Database Integration**
 
   * MySQL
-  * Spring Data JPA
-  * Hibernate
+  * Spring boot
 
 ## 🛠️ Tech Stack
 
@@ -61,8 +60,7 @@ The platform combines **rule-based intelligent matching, image similarity, JWT a
 
 * React 19
 * Vite
-* Tailwind CSS
-* JavaScript
+* CSS
 * HTML5
 * CSS3
 
@@ -72,7 +70,6 @@ The platform combines **rule-based intelligent matching, image similarity, JWT a
 * Spring Boot 3.3.2
 * Spring Security
 * Spring Data JPA
-* Hibernate
 * REST APIs
 * JWT
 * BCrypt
